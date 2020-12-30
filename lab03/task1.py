@@ -44,17 +44,15 @@ print("Degree for all nodes: ")
 print(dict(graph.degree()))
 
 
-# Task c
-print("One of the paths From node 6 to node 1: ")
+# get one of the paths from source to destination
+print("One of the paths from node 6 to node 1: ")
 print(nx.bidirectional_dijkstra(graph,6,1))
 
-
-# Task e
 print("All possible paths from node 6 to 1: ")
 
 # iterate and print all paths
 for path in nx.all_simple_paths(graph, source=6, target=1):
     print(path)
 
-# Task g
+# get and print adjcancy list
 nx.write_adjlist(graph, "Graph01_AL.adjlist")
